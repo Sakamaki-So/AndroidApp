@@ -4,36 +4,42 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.util.Log;
+import android.widget.Toast;
 
 import jp.ac.meijo.android.s221205073.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
+    private PrefDataStore prefDataStore;
+    private static final String KEY_NAME = "name";
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+        // do not touch above this line
         setContentView(binding.getRoot());
+        prefDataStore = PrefDataStore.getInstance(this);
 
-        binding.textButton.setOnClickListener(v -> {
+        prefDataStore.getString(KEY_NAME)
+                .ifPresent(s -> binding.activityMainText.setText(s));
+        binding.saveButton.setOnClickListener(v -> {
             var text = binding.editText.getText().toString();
-            binding.editText.setText(text);
+            prefDataStore.setString(KEY_NAME, text);
+            Toast.makeText(this, "SaveText", Toast.LENGTH_SHORT).show();
         });
+        binding.loadButton.setOnClickListener(v -> {
+            prefDataStore.getString(KEY_NAME)
+                    .ifPresent(s -> binding.activityMainText.setText(s));
+            Toast.makeText(this, "LoadText", Toast.LENGTH_SHORT).show();
+        });
+    }
 
-        binding.editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int before, int count) {
-            }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-            @Override
-            public void afterTextChanged(Editable editable) {
-                binding.activityMainText.setText(editable.toString());
-            }
-        });
+    @Override
+    protected void onStart() {
+        super.onStart();
+        prefDataStore.getString(KEY_NAME)
+                .ifPresent(s -> binding.activityMainText.setText(s));
     }
 }

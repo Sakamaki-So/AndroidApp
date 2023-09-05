@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">AndroidApp</string>
     <string name="name">sakamaki-so</string>
-    <string name="activity_main_button">SetText</string>
-    <string name="activity_main_main_text_before">TextView</string>
-    <string name="activity_main_main_text_after">Hello Lesson2</string>
+    <string name="text_button">save</string>
 </resources>
