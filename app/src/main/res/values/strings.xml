@@ -2,4 +2,30 @@
     <string name="app_name">AndroidApp</string>
     <string name="name">sakamaki-so</string>
     <string name="text_button">save</string>
+    <string name="button_a">ボタンA</string>
+    <string name="button_b">ボタンB</string>
+    <string name="view_message1">これは表示されている</string>
+    <string name="view_message2">これは最初は表示されている</string>
+    <string name="view_message3">これも最初は表示されている</string>
+    <string name="button_num_0">0</string>
+    <string name="button_num_1">1</string>
+    <string name="button_num_2">2</string>
+    <string name="button_num_3">3</string>
+    <string name="button_num_4">4</string>
+    <string name="button_num_5">5</string>
+    <string name="button_num_6">6</string>
+    <string name="button_num_7">7</string>
+    <string name="button_num_8">8</string>
+    <string name="button_num_9">9</string>
+    <string name="button_add">+</string>
+    <string name="button_sub">-</string>
+    <string name="button_div">÷</string>
+    <string name="button_mul">×</string>
+    <string name="button_equal">=</string>
+    <string name="button_explicit">明示的Intent</string>
+    <string name="button_implicit">暗黙的Intent</string>
+    <string name="button_send">送信</string>
+    <string name="button_launch">起動</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
 </resources>
