@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import jp.ac.meijo.android.s221205073.databinding.ActivityMainBinding;
@@ -27,12 +26,10 @@ public class MainActivity extends AppCompatActivity {
         binding.saveButton.setOnClickListener(v -> {
             var text = binding.editText.getText().toString();
             prefDataStore.setString(KEY_NAME, text);
-            Toast.makeText(this, "SaveText", Toast.LENGTH_SHORT).show();
         });
         binding.loadButton.setOnClickListener(v -> {
             prefDataStore.getString(KEY_NAME)
                     .ifPresent(s -> binding.activityMainText.setText(s));
-            Toast.makeText(this, "LoadText", Toast.LENGTH_SHORT).show();
         });
     }
 
