@@ -77,6 +77,22 @@ public class MainActivity2 extends AppCompatActivity {
             operand = 5;
             binding.numView.setText(operand);
         });
+        binding.buttonSix.setOnClickListener(v -> {
+            operand = 6;
+            binding.numView.setText(operand);
+        });
+        binding.buttonSeven.setOnClickListener(v -> {
+            operand = 7;
+            binding.numView.setText(operand);
+        });
+        binding.buttonEight.setOnClickListener(v -> {
+            operand = 8;
+            binding.numView.setText(operand);
+        });
+        binding.buttonNine.setOnClickListener(v -> {
+            operand = 9;
+            binding.numView.setText(operand);
+        });
     }
 
 }

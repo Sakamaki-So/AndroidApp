@@ -28,4 +28,5 @@
     <string name="button_launch">起動</string>
     <string name="button_ok">OK</string>
     <string name="button_cancel">Cancel</string>
+    <string name="button_get">取得</string>
 </resources>

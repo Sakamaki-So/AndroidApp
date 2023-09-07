@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConnectivityActivity">
+
+    <TextView
+        android:id="@+id/transportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="トランスポート"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transportName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Text"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/transportTitle"
+        app:layout_constraintTop_toTopOf="@+id/transportTitle" />
+
+    <TextView
+        android:id="@+id/ipAddressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="IPアドレス"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/transportTitle"
+        app:layout_constraintTop_toBottomOf="@+id/transportName" />
+
+    <TextView
+        android:id="@+id/ipAddressName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/ipAddressTitle"
+        app:layout_constraintStart_toStartOf="@+id/transportTitle"
+        tools:layout_editor_absoluteX="36dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
